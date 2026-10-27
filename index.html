@@ -3,75 +3,82 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mis juegos y serie favorita</title>
+    <meta name="description" content="Una selección personal de videojuegos y anime favoritos.">
+    <title>Mis juegos y anime favoritos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body class="bg-light">
-
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#inicio">Mis juegos y serie favorita</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+        <div class="container">
+            <a class="navbar-brand fw-semibold" href="index.html">Juegos y anime</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu-principal" aria-controls="menu-principal" aria-expanded="false" aria-label="Abrir menú">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="menu">
-                <ul class="navbar-nav me-auto">
-                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#juegos">Juegos</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+            <div class="collapse navbar-collapse" id="menu-principal">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html" aria-current="page">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Juegos.html">Juegos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contactos.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container">
-
-        <header id="inicio" class="text-white text-center p-5 mt-3 rounded" style="background-image: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)), url('https://cmsassets.rgpub.io/sanity/images/dsfx7636/news_live/77689751053a9cc507696fce850e345776667f0e-2560x1440.jpg'); background-size: cover; background-position: center;">
-            <h1>Mis juegos y serie favorita</h1>
-            <p>Estos son algunos juegos que me gustan y mi anime favorito.</p>
+        <header id="inicio" class="bg-primary text-white text-center p-5 mt-4 rounded-3 shadow-sm">
+            <h1 class="display-5 fw-bold">Mis juegos y anime favoritos</h1>
+            <p class="lead mb-0">Una pequeña selección de mundos a los que siempre me gusta volver.</p>
         </header>
 
-        <main id="juegos" class="mt-3">
+        <main id="juegos" class="py-4" aria-labelledby="titulo-juegos">
+            <div class="text-center mb-3">
+                <h2 id="titulo-juegos">Descubre mis favoritos</h2>
+                <p class="text-body-secondary mb-0">Explora cada tarjeta y encuentra más información.</p>
+            </div>
             <div class="row">
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card m-3 shadow-sm h-100">
-                        <img src="https://cdn.gameleap.com/images/articles/art_gFmajVBhdE/feature/0.6x.webp" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Imagen de los agentes de VALORANT">
-                        <div class="card-body">
-                            <h5 class="card-title">VALORANT</h5>
-                            <p class="card-text">Valorant es un shooter táctico 5v5 de Riot Games, lanzado el 2 de junio de 2020, donde equipos de agentes con habilidades únicas compiten por plantar o desactivar la Spike en rondas de una sola vida.</p>
-                            <a href="https://playvalorant.com/es-es/" class="btn btn-primary" target="_blank" rel="noopener">Más información</a>
+                    <article class="card m-3 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <img src="img/valorant.png" class="card-img-top object-fit-cover" alt="Agentes y escenario de VALORANT">
                         </div>
-                    </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">VALORANT</h3>
+                            <p class="card-text">Un juego táctico de disparos por equipos en el que cada agente aporta habilidades únicas a cada ronda.</p>
+                            <a href="https://playvalorant.com/es-es/" class="btn btn-primary mt-auto align-self-start" target="_blank" rel="noopener noreferrer">Más información</a>
+                        </div>
+                    </article>
                 </div>
-
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card m-3 shadow-sm h-100">
-                        <img src="https://shingeki.tv/news/wp-content/uploads/2021/11/sgk_kv4_comp_211112_RGB_web-283x400.jpg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Imagen promocional de Eren de Attack on Titan">
-                        <div class="card-body">
-                            <h5 class="card-title">Attack on Titan</h5>
-                            <p class="card-text">Attack on Titan narra la lucha de la humanidad contra los titanes, iniciando con Eren Jaeger tras la caída del Muro María y evolucionando hacia una guerra política y moral que revela el origen de los titanes y los conflictos entre Eldia y Marley.</p>
-                            <a href="https://aot-portal.com/" class="btn btn-primary" target="_blank" rel="noopener">Más información</a>
+                    <article class="card m-3 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <img src="img/Peak aot.png" class="card-img-top object-fit-cover" alt="Imagen de Attack on Titan">
                         </div>
-                    </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Attack on Titan</h3>
+                            <p class="card-text">Una historia de acción y misterio sobre la lucha de la humanidad por sobrevivir tras enormes murallas.</p>
+                            <a href="https://aot-portal.com/" class="btn btn-primary mt-auto align-self-start" target="_blank" rel="noopener noreferrer">Más información</a>
+                        </div>
+                    </article>
                 </div>
-
                 <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card m-3 shadow-sm h-100">
-                        <img src="https://images2.alphacoders.com/137/1370592.jpeg" class="card-img-top" style="height: 200px; object-fit: cover;" alt="Paisaje de Minecraft">
-                        <div class="card-body">
-                            <h5 class="card-title">Minecraft</h5>
-                            <p class="card-text">Minecraft es un videojuego de mundo abierto en el que los jugadores pueden explorar, minar recursos y construir libremente, combinando creatividad y supervivencia.</p>
-                            <a href="https://www.minecraft.net/es-es" class="btn btn-primary" target="_blank" rel="noopener">Más información</a>
+                    <article class="card m-3 shadow-sm h-100">
+                        <div class="ratio ratio-16x9">
+                            <img src="img/Minecraft.png" class="card-img-top object-fit-cover" alt="Construcción y paisaje de Minecraft">
                         </div>
-                    </div>
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="card-title h5">Minecraft</h3>
+                            <p class="card-text">Un mundo abierto para explorar, reunir recursos y construir, jugando a tu manera.</p>
+                            <a href="https://www.minecraft.net/es-es" class="btn btn-primary mt-auto align-self-start" target="_blank" rel="noopener noreferrer">Más información</a>
+                        </div>
+                    </article>
                 </div>
             </div>
         </main>
 
-        <footer id="contacto" class="bg-secondary text-white text-center p-3 mt-3">
-            <p>© 2026 Institut Barres i Ones</p>
+        <footer id="contacto" class="bg-secondary text-white text-center p-3 mt-3 rounded-top">
+            <p class="mb-1">Estos son mis juegos y series favorita</p>
+            <p class="mb-0">© 2026 Institut Barres i Ones</p>
         </footer>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
