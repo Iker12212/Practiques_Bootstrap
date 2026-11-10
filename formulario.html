@@ -160,6 +160,64 @@
             background-color: #f5f3fc;
         }
 
+        body > form .info-details {
+            margin-top: 1.5rem;
+        }
+
+        body > form .info-details summary {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0.8rem 1rem;
+            border: 1px solid #dce1ec;
+            border-radius: 0.7rem;
+            color: #34405c;
+            background: #fbfcff;
+            cursor: pointer;
+            font-weight: 600;
+            list-style: none;
+            transition: border-color 160ms ease, background-color 160ms ease;
+        }
+
+        body > form .info-details summary::-webkit-details-marker {
+            display: none;
+        }
+
+        body > form .info-details summary::after {
+            color: #6554c0;
+            content: "+";
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        body > form .info-details[open] summary::after {
+            content: "\2212";
+        }
+
+        body > form .info-details summary:hover,
+        body > form .info-details[open] summary {
+            border-color: #b9b1e4;
+            background: #f7f5ff;
+        }
+
+        body > form .info-options {
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            padding: 0.85rem;
+            border: 1px solid #eaedf5;
+            border-radius: 0.8rem;
+            background: #f8f9fd;
+        }
+
+        body > form .info-options .form-check {
+            width: 100%;
+            min-width: 0;
+            flex: none;
+            margin: 0;
+            background: #fff;
+        }
+
         body > form .btn {
             width: 100%;
             margin-top: 0.4rem;
@@ -199,6 +257,7 @@
         @media (prefers-reduced-motion: reduce) {
             body > form .form-control,
             body > form .form-check,
+            body > form .info-details summary,
             body > form .btn {
                 transition: none;
             }
@@ -254,7 +313,7 @@
     <input type="date" class="form-control" id="exampleInputPassword1">
     <div id="dateHelp" class="form-text">Escribe aqui tu fecha de nacimiento.</div>
   </div>
-  <fieldset class="mb-3">
+  <fieldset class="mb-4">
     <label class="form-label">Género</label>
     <div class="d-flex flex-wrap gap-3">
       <div class="form-check">
@@ -271,6 +330,19 @@
       </div>
     </div>
   </fieldset>
+  <div class="mb-3">
+    <label class="form-label" for="autoSizingSelect">Tipo de información</label>
+    <select class="form-select" id="autoSizingSelect">
+      <option selected>Elige una opción</option>
+      <option value="1">Información general</option>
+      <option value="2">Soporte técnico</option>
+      <option value="3">Recomendaciones</option>
+    </select>
+  </div>
+  <div class="form-floating mt-4 mb-3">
+    <textarea class="form-control" placeholder="Escribe tus comentarios" id="floatingTextarea"></textarea>
+    <label for="floatingTextarea">Comentarios</label>
+  </div>
   <button type="submit" class="btn btn-primary">Confirmar</button>
 </form>
 </body>
